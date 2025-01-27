@@ -19,7 +19,7 @@ body {
 }
 
 .section-padding {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
 }
 
 /* Header & Navigation */
@@ -281,11 +281,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-}
-
-.footer-logo img {
-    height: 60px;
-    margin-bottom: 2rem;
 }
 
 .social-links {
