@@ -4,7 +4,7 @@ Website resmi untuk komunitas WADIDAW Coin 🚀
 
 ## Deskripsi
 
-WADIDAW adalah koin meme berbasis Solana yang dibuat oleh komunitas Indonesia. Website ini menyediakan informasi tentang WADIDAW Coin, cara membelinya, dan cara bergabung dengan komunitas kami.
+WADIDAW adalah koin meme berbasis Solana yang dibuat oleh komunitas WADIDAW di Indonesia. Website ini menyediakan informasi tentang WADIDAW Coin, cara membelinya, dan cara bergabung dengan komunitas kami.
 
 ## Fitur Website
 
@@ -35,4 +35,4 @@ WADIDAW adalah koin meme berbasis Solana yang dibuat oleh komunitas Indonesia. W
 WADIDAW Coin adalah koin meme yang dimaksudkan sebagai koleksi digital dan tidak dimaksudkan sebagai saran investasi. Selalu lakukan riset mandiri (DYOR) sebelum berpartisipasi.
 
 ---
-Dibuat dengan ❤️ oleh Komunitas WADIDAW
+Dibuat dengan ❤️ oleh Komunitas WADIDAW Indonesia
