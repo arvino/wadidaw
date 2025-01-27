@@ -152,8 +152,7 @@ nav a:hover {
 }
 
 .feature-card img {
-    width: 60px;
-    margin-bottom: 1rem;
+    display: none;
 }
 
 /* Tokenomics Section */
@@ -249,8 +248,7 @@ nav a:hover {
 }
 
 .community-card img {
-    width: 50px;
-    margin-bottom: 1rem;
+    display: none;
 }
 
 /* FAQ Section */
@@ -298,13 +296,7 @@ footer {
 }
 
 .social-links img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.social-links img:hover {
-    transform: translateY(-3px);
+    display: none;
 }
 
 .disclaimer {
@@ -320,6 +312,32 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Community Icons */
+.community-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Social Links in Footer */
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
