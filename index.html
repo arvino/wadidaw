@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WADIDAW Coin - Koin Meme Komunitas</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +20,14 @@
                 <li><a href="#tokenomics">Tokenomics</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#komunitas">Komunitas</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><button class="wallet-btn" onclick="connectWallet()">Hubungkan Wallet</button></li>
             </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -26,51 +35,217 @@
         <section id="beranda" class="hero">
             <h1>WADIDAW COIN</h1>
             <p>Koin Meme Pertama dari Indonesia untuk Dunia! 🚀</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>Holders</h3>
+                    <p>10,000+</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Market Cap</h3>
+                    <p>$1M+</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Volume 24h</h3>
+                    <p>$500K+</p>
+                </div>
+            </div>
             <div class="cta-buttons">
                 <a href="#" class="btn primary">Beli WADIDAW</a>
                 <a href="#" class="btn secondary">Bergabung dengan Komunitas</a>
             </div>
         </section>
 
-        <section id="tentang">
+        <section id="tentang" class="section-padding">
             <h2>Tentang WADIDAW</h2>
             <div class="features">
                 <div class="feature-card">
+                    <img src="assets/community.svg" alt="Komunitas Icon">
                     <h3>Komunitas</h3>
-                    <p>Dibangun oleh komunitas, untuk komunitas</p>
+                    <p>Dibangun oleh komunitas, untuk komunitas. Bergabunglah dengan ribuan holder WADIDAW!</p>
                 </div>
                 <div class="feature-card">
+                    <img src="assets/security.svg" alt="Keamanan Icon">
                     <h3>Keamanan</h3>
-                    <p>Smart contract teraudit & likuiditas terkunci</p>
+                    <p>Smart contract teraudit & likuiditas terkunci selama 1 tahun untuk keamanan investor</p>
                 </div>
                 <div class="feature-card">
+                    <img src="assets/transparency.svg" alt="Transparansi Icon">
                     <h3>Transparansi</h3>
-                    <p>100% transparan dan terdesentralisasi</p>
+                    <p>100% transparan dan terdesentralisasi. Semua informasi tersedia di blockchain</p>
                 </div>
             </div>
         </section>
 
-        <section id="tokenomics">
+        <section id="tokenomics" class="section-padding">
             <h2>Tokenomics</h2>
             <div class="tokenomics-info">
                 <div class="supply-info">
                     <h3>Total Supply</h3>
                     <p>1,000,000,000,000 WADIDAW</p>
+                    <div class="chart-container">
+                        <canvas id="tokenomicsChart"></canvas>
+                    </div>
                 </div>
-                <div class="distribution">
-                    <!-- Tambahkan chart distribusi token di sini -->
+                <div class="token-distribution">
+                    <div class="distribution-item">
+                        <span class="dot presale"></span>
+                        <p>Presale: 40%</p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="dot liquidity"></span>
+                        <p>Likuiditas: 30%</p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="dot marketing"></span>
+                        <p>Marketing: 20%</p>
+                    </div>
+                    <div class="distribution-item">
+                        <span class="dot team"></span>
+                        <p>Tim: 10%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="section-padding">
+            <h2>Roadmap</h2>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <div class="phase">Fase 1</div>
+                    <ul>
+                        <li>✅ Peluncuran Website</li>
+                        <li>✅ Pembentukan Komunitas</li>
+                        <li>✅ Audit Smart Contract</li>
+                        <li>⏳ Listing di DEX</li>
+                    </ul>
+                </div>
+                <div class="roadmap-item">
+                    <div class="phase">Fase 2</div>
+                    <ul>
+                        <li>Marketing Campaign</li>
+                        <li>Listing CoinGecko</li>
+                        <li>Listing CoinMarketCap</li>
+                        <li>10,000 Holders</li>
+                    </ul>
+                </div>
+                <div class="roadmap-item">
+                    <div class="phase">Fase 3</div>
+                    <ul>
+                        <li>NFT Collection</li>
+                        <li>Staking Platform</li>
+                        <li>CEX Listing</li>
+                        <li>Ekspansi Global</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="komunitas" class="section-padding">
+            <h2>Bergabung dengan Komunitas</h2>
+            <div class="community-links">
+                <a href="https://twitter.com/WadidawCoin" class="community-card">
+                    <img src="assets/twitter.svg" alt="Twitter">
+                    <h3>Twitter</h3>
+                    <p>Follow untuk updates</p>
+                </a>
+                <a href="https://t.me/WadidawCommunity" class="community-card">
+                    <img src="assets/telegram.svg" alt="Telegram">
+                    <h3>Telegram</h3>
+                    <p>Bergabung dengan grup</p>
+                </a>
+                <a href="https://discord.gg/wadidaw" class="community-card">
+                    <img src="assets/discord.svg" alt="Discord">
+                    <h3>Discord</h3>
+                    <p>Diskusi dengan tim</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="faq" class="section-padding">
+            <h2>FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Apa itu WADIDAW Coin?</h3>
+                    <p>WADIDAW adalah koin meme berbasis Solana yang dibuat oleh komunitas Indonesia untuk dunia.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Bagaimana cara membeli WADIDAW?</h3>
+                    <p>Anda dapat membeli WADIDAW di Raydium atau Jupiter Exchange menggunakan wallet Solana.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Apakah WADIDAW aman?</h3>
+                    <p>Ya, smart contract WADIDAW telah diaudit dan likuiditas terkunci selama 1 tahun.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="#"><img src="assets/twitter.svg" alt="Twitter"></a>
-            <a href="#"><img src="assets/telegram.svg" alt="Telegram"></a>
-            <a href="#"><img src="assets/discord.svg" alt="Discord"></a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/wadidaw-logo.png" alt="WADIDAW Logo">
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/WadidawCoin"><img src="assets/twitter.svg" alt="Twitter"></a>
+                <a href="https://t.me/WadidawCommunity"><img src="assets/telegram.svg" alt="Telegram"></a>
+                <a href="https://discord.gg/wadidaw"><img src="assets/discord.svg" alt="Discord"></a>
+            </div>
+            <div class="disclaimer">
+                <p>WADIDAW Coin adalah koin meme yang dimaksudkan sebagai koleksi digital dan tidak dimaksudkan sebagai saran investasi.</p>
+            </div>
         </div>
-        <p>&copy; 2024 WADIDAW Coin. Hak Cipta Dilindungi.</p>
+        <p class="copyright">&copy; 2024 WADIDAW Coin. Hak Cipta Dilindungi.</p>
     </footer>
+
+    <script>
+        // Tokenomics Chart
+        const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Presale', 'Likuiditas', 'Marketing', 'Tim'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: [
+                        '#FF6B6B',
+                        '#4ECDC4',
+                        '#45B7D1',
+                        '#96CEB4'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // Wallet Connection
+        async function connectWallet() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const response = await window.solana.connect();
+                    console.log('Connected with Public Key:', response.publicKey.toString());
+                    // Update button text
+                    document.querySelector('.wallet-btn').textContent = 
+                        response.publicKey.toString().slice(0, 4) + '...' + 
+                        response.publicKey.toString().slice(-4);
+                } catch (err) {
+                    console.error(err);
+                }
+            } else {
+                window.open('https://phantom.app/', '_blank');
+            }
+        }
+    </script>
 </body>
 </html> 
